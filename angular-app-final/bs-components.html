@@ -1,0 +1,193 @@
+<h2>BOOTSTRAP COMPONENTS</h2>
+
+<hr>
+<h3>Accordian <div class="pull-right small">Controller > AccordionCtrl</div></h3>
+<hr>
+
+<div ng-controller="AccordionCtrl">
+
+  <uib-accordion close-others="oneAtATime">
+    
+    <uib-accordion-group heading="Initially expanded panel" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
+      This content is initially expanded.
+    </uib-accordion-group>
+
+    <uib-accordion-group heading="{{group.title}}" ng-repeat="group in groups">
+      {{group.content}}
+    </uib-accordion-group>
+
+    <uib-accordion-group heading="Dynamic Body Content">
+      <p>The body of the uib-accordion group grows to fit the contents</p>
+      <button type="button" class="btn btn-default btn-sm" ng-click="addItem()">Add Item</button>
+      <div ng-repeat="item in items">{{item}}</div>
+    </uib-accordion-group>
+
+    <uib-accordion-group is-open="status.open">
+      <uib-accordion-heading>
+        I can have markup, too! <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+      </uib-accordion-heading>
+      This is just some content to illustrate fancy headings.
+    </uib-accordion-group>
+
+  </uib-accordion>
+
+</div>
+
+
+
+
+<hr>
+<h3>Collapse <div class="pull-right small">Controller > collapseCustom</div></h3>
+<hr>
+
+<div ng-controller="collapseCustom">
+	<div class="panel panel-default">
+	    <div class="panel-heading" ng-click="isCollapsed = !isCollapsed">
+	      <h4 class="panel-title">
+	        <a>
+	          Collapsible Item
+	        </a>
+	      </h4>
+	    </div>
+	    <div uib-collapse="isCollapsed">
+	      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit aliquid, maxime, hic culpa ipsam atque nesciunt enim dignissimos animi, labore ea dolor laborum iste non aperiam quas corporis accusantium itaque!
+	      </div>
+	    </div>
+	</div>
+</div>
+
+
+
+<hr>
+<h3>Modals <div class="pull-right small">Controllers > ModalDemoCtrl and ModalInstanceCtrl</div></h3>
+<hr>
+
+
+<div ng-controller="ModalDemoCtrl">
+    <script type="text/ng-template" id="myModalContent.html">
+        <div class="modal-header">
+            <h3 class="modal-title">Modal Title</h3>
+        </div>
+        <div class="modal-body">
+            <ul>
+                <li ng-repeat="item in items">
+                    <a href="#" ng-click="$event.preventDefault(); selected.item = item">{{ item }}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+        </div>
+    </script>
+
+    <button type="button" class="btn btn-primary" ng-click="open()">Regular Modal</button>
+    <button type="button" class="btn btn-primary" ng-click="open('lg')">Large modal</button>
+    <button type="button" class="btn btn-primary" ng-click="open('sm')">Small modal</button>
+</div>
+
+
+
+
+
+
+
+
+
+<hr>
+<h3>Date Picker <div class="pull-right small">Controller > DatepickerCtrl</div></h3>
+<hr>
+
+
+<div ng-controller="DatepickerCtrl">
+    
+    <div class="row">
+      <div class="col-md-6">
+        <p class="input-group">
+          <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+          </span>
+        </p>
+      </div>
+
+      <div class="col-md-6">
+        <p class="input-group">
+          <input type="text" class="form-control" uib-datepicker-popup ng-model="dt" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+          </span>
+        </p>
+      </div>
+    </div>
+    
+    <button type="button" class="btn btn-primary" ng-click="today()">Today</button>
+    <button type="button" class="btn btn-warning" ng-click="clear()">Clear</button>
+</div>
+
+
+
+
+
+
+
+<hr>
+<h3>Dropdown <div class="pull-right small">Controller > DropdownCtrl</div></h3>
+<hr>
+
+<div class="row" ng-controller="DropdownCtrl">
+    
+  <div class="col-md-6">
+
+      <!-- Simple dropdown -->
+      <span uib-dropdown on-toggle="toggled(open)">
+        <a href id="simple-dropdown" uib-dropdown-toggle>
+          Click for a Dropdown!
+        </a>
+        <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="simple-dropdown">
+          <li ng-repeat="choice in items">
+            <a href>{{choice}}</a>
+          </li>
+        </ul>
+      </span>
+
+  </div>
+
+  <div class="col-md-6">
+
+      <!-- Single button -->
+      <div class="btn-group" uib-dropdown is-open="status.isopen">
+        <button id="single-button" type="button" class="btn btn-primary" uib-dropdown-toggle ng-disabled="disabled">
+          Button dropdown <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+          <li role="menuitem"><a href="#">Action</a></li>
+          <li role="menuitem"><a href="#">Another action</a></li>
+          <li role="menuitem"><a href="#">Something else here</a></li>
+        </ul>
+      </div>
+
+  </div>    
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+<h3>Time Picker <div class="pull-right small">Controller > TimepickerCtrl</div></h3>
+<hr>
+
+
+<div ng-controller="TimepickerCtrl">
+  <uib-timepicker ng-model="mytime" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></uib-timepicker>
+  <pre class="alert alert-info">Time is: {{mytime | date:'shortTime' }}</pre>
+  <button type="button" class="btn btn-info" ng-click="toggleMode()">12H / 24H</button>
+</div>

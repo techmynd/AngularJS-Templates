@@ -1,0 +1,27 @@
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle btn navbar-btn" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="#/home" class="logo"><img src="assets/images/AngularJS-large.png" class="wow flipInY img-responsive"></a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse navbar-responsive-collapse wow fadeIn" data-wow-delay="0.1s" uib-collapse="navCollapsed">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#/home"><i class="fa fa-home fa-fw"></i> HOME</a></li>
+          <li><a href="#/elements"><i class="fa fa-cubes fa-fw"></i> ELEMENTS</a></li>
+          <li uib-dropdown><a href="#/components" uib-dropdown-toggle><i class="fa fa-cubes fa-fw"></i> COMPONENTS <b class="caret"></b></a>
+              <ul uib-dropdown-menu>
+                <li><a href="#/bs-components">Bootstrap Components</a></li>
+                <li><a href="#/bs-carousel">Bootstrap Carousel</a></li>
+              </ul>
+          </li>
+          <li><a href="#/todo"><i class="fa fa-list-alt fa-fw"></i> TO DO LIST</a></li>
+          <li><a href="#/contact"><i class="fa fa-envelope fa-fw"></i> CONTACT</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>

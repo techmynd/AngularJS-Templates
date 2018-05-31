@@ -1,0 +1,22 @@
+<h2>TO DO LIST <div class="pull-right small">Controller > myList</div></h2>
+<hr>
+
+<div ng-controller="myList" class="mylist">
+  
+  <ul class="list-unstyled">
+    <li ng-repeat="todo in todos" class="todo-row">{{todo}} 
+    	<span ng-click="removeItem($index)" style="cursor:pointer;" class="delete-todo">×</span>
+    </li>
+  </ul>
+  
+  <div class="text-center add-new-cover">
+    <div class="form-inline">
+        <input placeholder="Add todo item" ng-model="addMe" class="form-control">
+        <button ng-click="addItem()" class="btn btn-success">Add</button>
+    </div>
+  </div>
+
+    <div class="error-red text-center">{{errortext}}</div>
+
+  </div>
+</div>

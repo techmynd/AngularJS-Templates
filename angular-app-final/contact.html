@@ -1,0 +1,60 @@
+<h2>CONTACT <div class="pull-right small">Controller > contactCtrl</div></h2>
+<hr>
+
+<div class="row" ng-controller="contactCtrl">
+
+<form name="testContactForm" ng-submit="submitForm(testContactForm.$valid)" novalidate>
+
+	<div class="col-md-6">
+
+	  <div class="form-group">
+	    <label>Name</label>
+	    <input type="text" class="form-control" name="name" ng-model="name" ng-model-options="{ updateOn: 'blur' }" required>
+			<div class="error-red" ng-show="testContactForm.name.$touched && testContactForm.name.$invalid">The name is required.</div>
+	  </div>
+
+	  <div class="form-group">
+	    <label>Email Address</label>
+	    <input type="email" class="form-control" name="email" ng-model="email" ng-model-options="{ updateOn: 'blur' }" required>
+
+			<div class="error-red" ng-show="testContactForm.email.$touched && testContactForm.email.$invalid">
+			<span ng-show="testContactForm.email.$error.required">Email is required.</span>
+			<span ng-show="testContactForm.email.$error.email">Invalid email address.</span>
+			</div>
+
+	  </div>
+
+	  <div class="form-group">
+	    <label>Phone</label>
+	    <input type="phone" class="form-control" name="phone" ng-model="phone" ng-pattern="/^[0-9]+$/" ng-model-options="{ updateOn: 'blur' }" required>
+
+			<div class="error-red" ng-show="testContactForm.phone.$touched && testContactForm.phone.$invalid">
+			<span ng-show="testContactForm.phone.$error.required">Phone is required.</span>
+			<span ng-show="testContactForm.phone.$error.pattern">Phone must be numeric.</span>
+			</div>
+
+	  </div>
+
+	</div>
+
+
+	<div class="col-md-6">
+
+	  <div class="form-group">
+	    <label>Comments</label>
+	    <textarea rows="9" class="form-control" name="comments" ng-model="comments" ng-model-options="{ updateOn: 'blur' }" required></textarea>
+			<div class="error-red" ng-show="testContactForm.comments.$touched && testContactForm.comments.$invalid">Please write your message.</div>
+	  </div>
+
+	</div>
+
+
+	<div class="col-md-12">
+
+	  <button type="submit" class="btn btn-success btn-lg btn-block" ng-disabled="testContactForm.phone.$untouched || testContactForm.phone.$invalid || testContactForm.name.$untouched || testContactForm.name.$invalid || testContactForm.comments.$untouched || testContactForm.comments.$invalid || testContactForm.email.$untouched || testContactForm.email.$invalid">Submit</button>
+
+	</div>
+
+</form>
+
+</div>

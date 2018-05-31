@@ -1,0 +1,127 @@
+html { width:100%; }
+body { background-color:#eaeaea; width:100%; height:100%; height:100%; overflow-x:hidden !important; font-family: 'Open Sans', sans-serif; font-weight: 600; }
+
+.ubuntu { font-family: 'Ubuntu', sans-serif; }
+.open-sanse { font-family: 'Open Sans', sans-serif; }
+.roboto { font-family: 'Roboto', sans-serif; }
+
+
+a, a:hover, img, img:hover, button, button:hover, i, i:hover, div { transition: all 0.3s ease-in-out; }
+a:hover, a:active, a:visited, a:focus { text-decoration:none; }
+img { border:0; }
+
+.clear, .clear1, .clear2, .clear3, .clear4, .clear5, .clear10, .clear20, .clear30, .clear40, .clear80 { clear:both;	font-size:0px; line-height:0px; }
+.clear { height:0px; } .clear1 { height:1px; } .clear2 { height:2px; } .clear3 { height:3px; } .clear4 { height:4px; } .clear5 { height:5px; } .clear10 { height:10px; } .clear20 { height:20px; } .clear30 { height:30px; } .clear40 { height:40px; } .clear80 { height:40px; }
+
+.no-padding-margin { padding:0; margin:0; }
+.no-padding { padding:0; }
+.no-margin { margin:0; }
+
+.relative { position: relative;; }
+/*.wow { visibility: hidden; }*/
+
+.app-wrapper { background:#fff; border-radius: 6px; box-shadow: 1px 1px 10px #ccc; padding: 20px; }
+.app-wrapper h2 { margin-top: 0; font-family: 'Ubuntu', sans-serif; font-weight: 700; }
+.navbar-default a { font-family: 'Ubuntu', sans-serif; font-weight: 700; color: #dd1b16 !important; }
+.navbar-default a .fa { color: #999; }
+
+.logo img { max-width: 47px; }
+.navbar-default { /*background-image: none; background-color: transparent;*/ padding-top: 10px; padding-bottom: 10px; }
+.body-top-margin { margin-top: 90px; }
+.navbar-right { /*margin-top: 26px;*/ }
+#navbar { /*overflow-y: hidden !important;*/ }
+
+.copyrights { color: #999; font-weight: 400; font-size: 13px; }
+
+.fa-green { color: #31d106; }
+.txt-404 { padding:40px 0 0px 0; font-size:100px; color:#ccc; }
+
+.panel-heading { cursor: pointer; }
+
+.mylist ul { margin-bottom: 0px; }
+.todo-row { padding: 10px 0; border-bottom: 1px solid #ccc; }
+.delete-todo { float: right; font-size: 20px; color: #ff0000; margin-top: -4px; display: inline-block; font-weight: bold; }
+.delete-todo:hover { color: #000; }
+.error-red { color: #ff0000; margin-top: 10px; }
+.add-new-cover { padding: 10px; background-color:#eee; }
+
+.full button span { border-radius: 32px; color: black; }
+.partially button span { background-color: orange; border-radius: 32px; color: black; }
+
+/*spinner - loader*/
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.pace-inactive {
+  display: none;
+}
+
+.pace .pace-progress {
+  background: #29d;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 2px;
+}
+
+.pace .pace-progress-inner {
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 10px #29d, 0 0 5px #29d;
+  opacity: 1.0;
+  -webkit-transform: rotate(3deg) translate(0px, -4px);
+  -moz-transform: rotate(3deg) translate(0px, -4px);
+  -ms-transform: rotate(3deg) translate(0px, -4px);
+  -o-transform: rotate(3deg) translate(0px, -4px);
+  transform: rotate(3deg) translate(0px, -4px);
+}
+
+.pace .pace-activity {
+  display: block;
+  position: fixed;
+  z-index: 2000;
+  top: 15px;
+  right: 15px;
+  width: 14px;
+  height: 14px;
+  border: solid 2px transparent;
+  border-top-color: #29d;
+  border-left-color: #29d;
+  border-radius: 10px;
+  -webkit-animation: pace-spinner 400ms linear infinite;
+  -moz-animation: pace-spinner 400ms linear infinite;
+  -ms-animation: pace-spinner 400ms linear infinite;
+  -o-animation: pace-spinner 400ms linear infinite;
+  animation: pace-spinner 400ms linear infinite;
+}
+
+@-webkit-keyframes pace-spinner {
+  0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@-moz-keyframes pace-spinner {
+  0% { -moz-transform: rotate(0deg); transform: rotate(0deg); }
+  100% { -moz-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@-o-keyframes pace-spinner {
+  0% { -o-transform: rotate(0deg); transform: rotate(0deg); }
+  100% { -o-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@-ms-keyframes pace-spinner {
+  0% { -ms-transform: rotate(0deg); transform: rotate(0deg); }
+  100% { -ms-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@keyframes pace-spinner {
+  0% { transform: rotate(0deg); transform: rotate(0deg); }
+  100% { transform: rotate(360deg); transform: rotate(360deg); }
+}

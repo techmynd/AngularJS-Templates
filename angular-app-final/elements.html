@@ -1,0 +1,72 @@
+<h2>ELEMENTS</h2>
+
+<hr>
+<h3>Show Hide via Angular <div class="pull-right small">Controller > showHide</div></h3>
+<hr>
+
+<div ng-controller="showHide">
+
+<p><a class="btn btn-primary" href="" ng-click="visibilityAng=true">Show</a> <a class="btn btn-primary" href="" ng-click="visibilityAng=false">Hide</a></p>
+
+<div class="clear10"></div>
+
+<div ng-show="visibilityAng">
+<div class="well well-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque dolor magni dolore hic tenetur nemo deleniti quibusdam! Consequuntur magnam, adipisci.</div></div>
+
+</div>
+
+
+
+
+
+
+<hr>
+<h3>isCollapsed / Toggle<div class="pull-right small">Controller > CollapseCtrl</div></h3>
+<hr>
+
+
+<div ng-controller="CollapseCtrl">
+	<button type="button" class="btn btn-primary" ng-click="isCollapsed = !isCollapsed">Toggle Collapse</button>
+	<div class="clear20"></div>
+	<div uib-collapse="isCollapsed">
+		<div class="well well-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt ducimus doloremque magni aut soluta maiores culpa, quae exercitationem tempore numquam.</div>
+	</div>
+</div>
+
+
+
+
+
+<hr>
+<h3>ng-repeat & Sort<div class="pull-right small">Controller > CourseController</div></h3>
+<hr>
+
+
+<div ng-controller="CourseController">
+
+<div class="table-responsive">
+   
+   <div class="pull-right form-inline">
+   <label>Sort Results</label>
+   <input type="text" ng-model="sort" class="form-control">
+   </div>
+
+   <div class="clear10"></div>
+
+	<table class="table table-bordered">
+		<thead>
+		<tr>
+			<th style="width:10%;" class="text-center">#</th>
+			<th style="width:45%;">Name</th>
+			<th style="width:45%;">Course Duration</th>
+		</tr>
+		</thead>
+		<tr ng-repeat="course in courses | filter : sort">
+		<td class="text-center">{{course.id}}</td>      
+		<td>{{course.name}}</td>
+		<td>{{course.duration}}</td>
+		</tr>
+	</table>
+</div>
+
+</div>
