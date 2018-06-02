@@ -1,0 +1,92 @@
+Angular JS
+
+- It is a Javascript MVC framework created by Google to build properly architectured and maintainable web applications.
+- It is what HTML could have been had it been designed for web application development.
+- Declarative code vs Imperative code.
+- Focus more on HTML side of web applications.
+- For MVC/MVVM design patterns.
+
+It's NOT:
+- It's not a Javascript Library. There are no functions which can be directly called and use.
+- It's not a DOM Manipulation library like JQuery.
+
+WHY Angular?
+- It enhances HTML by adding directives, custom tags/attributes, expressions, templates within HTML.
+- Encourage MVC pattern.
+- Code Reuse.
+- Good for SPAs.
+
+Features:
+- Declarative approach
+- Two way data binding
+- Reusable components (Custom directives)
+- MVC design pattern
+- Dependency Injection
+- Routing
+- Templating
+- Modules
+- Services/Factories
+- Expressions
+- Filters
+- Directives
+- Form Validation
+- $scope $http $routeProvider
+
+
+ng-app:
+- This is the main Angular directive
+- It is used to auto-bootstrap and Angular application.
+<html ng-app>
+
+Directives:
+- The directives can be placed in element names, attributes, class names
+- They are the way to teach the HTML new tricks.
+- A directive is just a function which executes when the compiler encounters it in the DOM.
+<input ng-model="userName">
+Custom defined directive
+<span draggable>Drag me</span>
+
+Expression:
+Expressions are javascript like code snippets that are placed inside {{}}
+
+<body>
+{{1+2}}
+</body>
+
+MVC:
+Model: 
+- Properties of $scope
+- $scopes are attached to DOM
+- $scope properties are accessed through bindings
+
+View:
+- The templates (HTML with data bindings) that is rendered to a view.
+
+Controller:
+- The ngController directive specifies a Controller class; the class contains business logic behind the application to decorate the scope with functions and values
+
+
+
+Routing:
+- It is used for deep-linking URLs to controllers and views (HTML partials)
+- It watches location.url and tries to map the path to an existing route definition:
+
+$routeProvider.when('/Book', {
+	template: 'templates/book.html',
+	controller: BookCtrl
+})
+
+
+$scope:
+- Refers to application model.
+
+Dependency Injection:
+- It's a software design pattern that deals with how code gets hold of it's dependencies.
+
+Filters:
+- Format data to display to the user
+- We can create custom filters
+{{new Date() | date:'dd/MM/yyyy'}}
+
+
+
