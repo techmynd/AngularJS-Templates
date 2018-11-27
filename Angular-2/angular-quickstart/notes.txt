@@ -1,0 +1,6 @@
+https://v2.angular.io/docs/ts/latest/quickstart.html
+
+> yarn run start
+http://localhost:3000/
+
+angular 2 with JavaScript not TypeScript

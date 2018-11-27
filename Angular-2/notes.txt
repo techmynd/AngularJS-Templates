@@ -1,0 +1,10 @@
+Manual
+======
+https://v2.angular.io/docs/js/latest/quickstart.html
+https://v2.angular.io/docs/ts/latest/quickstart.html
+
+CLI
+===
+https://cli.angular.io/
+
+
